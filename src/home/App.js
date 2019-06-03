@@ -19,7 +19,7 @@ class App extends Component {
         return /*html*/ ` 
             <div>
                 <main>
-                    <p>DOGS, A TEST PTAG IN APP.JS</p>
+                    <p>IF YOU CAN READ THIS, YOU'RE ON THE MAIN PAGE</p>
                 </main>
             </div>
         `;
