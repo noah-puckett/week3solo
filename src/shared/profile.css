@@ -1,0 +1,23 @@
+img {
+    height: 300px;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.username {
+    display: block;
+
+    font-size: 3em;
+}
+
+button {
+    display: block;
+    height: 30px;
+    width: 200px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

@@ -14,7 +14,7 @@ test('renders with full user props', assert => {
     const expected = /*html*/`
         <div class="profile">
             <img src="https://lh5.googleusercontent.com/-EnRNBAYvURk/AAAAAAAAAAI/AAAAAAAAAK8/cMJNFAVX5SE/photo.jpg">
-            <span>Noah P</span>
+            <span class="username">Noah P</span>
             <button>Log Out???</button>
         </div>
     `;
@@ -36,7 +36,7 @@ test('renders with default avatar when no photoURL', assert => {
     const expected = /*html*/`
         <div class="profile">
             <img src="./assets/hahaha.jpg">
-            <span>Noah P</span>
+            <span class="username">Noah P</span>
             <button>Log Out???</button>
         </div>
     `;
