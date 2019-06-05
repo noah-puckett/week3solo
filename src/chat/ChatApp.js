@@ -4,7 +4,8 @@ class Chat extends Component {
 
     renderTemplate() {
         return /*html*/ ` 
-            <div></div>
+            <div>
+            </div>
         `;
     }
 }
