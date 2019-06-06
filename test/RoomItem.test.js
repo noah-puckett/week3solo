@@ -1,4 +1,3 @@
-//TODO: fix imports with testing file, rename this file
 import RoomItem from '../src/chat/RoomItem.js';
 
 const test = QUnit.test;
