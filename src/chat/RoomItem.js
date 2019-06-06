@@ -3,7 +3,6 @@ import { auth, roomFolderRef } from '../services/firebase.js';
 
 class RoomItem extends Component {
 
-    //TODO: uncomment render when ready to add remove button!
     render() {
         const dom = this.renderDOM();
         const room = this.props.room;
@@ -20,7 +19,7 @@ class RoomItem extends Component {
     
     renderTemplate() {
         const room = this.props.room;
-        const isOwner = auth.currentUser.uid === room.owner;
+        const isOwner = auth.currentUser && auth.currentUser.uid === room.owner;
         const button = isOwner ? '<button>Remove Chat</button>' : '';
         return /*html*/ ` 
             <li>
@@ -31,4 +30,3 @@ class RoomItem extends Component {
     }
 }
 export default RoomItem;
-//

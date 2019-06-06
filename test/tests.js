@@ -7,4 +7,3 @@ import './RoomItem.test.js';
 QUnit.done(() => {
     app.delete();
 }); 
-//

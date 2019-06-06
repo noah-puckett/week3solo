@@ -4,7 +4,6 @@ import AddRoom from '../chat/AddRoom.js';
 import RoomList from '../chat/RoomList.js';
 import { roomFolderRef } from '../services/firebase.js';
 
-
 class App extends Component {
 
     render() {
@@ -21,7 +20,6 @@ class App extends Component {
         const roomList = new RoomList({ rooms: [] });
         main.appendChild(roomList.render());
         
-        //TODO: THIS IS HOW WE TALK TO THE DB AND IT UPDATES OUR LIST ARRAY
         roomFolderRef
             .on('value', snapshot => {
                 const value = snapshot.val();
@@ -44,4 +42,3 @@ class App extends Component {
     }
 }
 export default App;
-//

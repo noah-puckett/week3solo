@@ -1,7 +1,5 @@
 import Component from '../Component.js';
 import { auth, roomFolderRef } from '../services/firebase.js';
-//import roomlist?
-//import roomitem?
 
 class AddRoom extends Component {
 
@@ -14,7 +12,6 @@ class AddRoom extends Component {
             
             const formData = new FormData(form);
 
-            //put it... in firebase?
             const roomRef = roomFolderRef.push();
 
             const room = {
@@ -28,7 +25,6 @@ class AddRoom extends Component {
             });
         });
 
-    
         return form;
     }
 
@@ -42,4 +38,3 @@ class AddRoom extends Component {
     }
 }
 export default AddRoom;
-//
