@@ -9,9 +9,7 @@ const config = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(config);
-
+export const app = firebase.initializeApp(config);
 export const auth = firebase.auth();
-
-//THIS BREAKS THE BUILD IF UNCOMMENTED
-// export const db = firebase.database();
+export const db = firebase.database();
+export const roomFolderRef = db.ref('roomFolderRef');
