@@ -2,7 +2,7 @@ import { auth } from '../services/firebase.js';
 import '../utils/check-auth.js';
 import ChatApp from '../chat/ChatApp.js';
 
-const root = document.getElementById('app');
+const root = document.getElementById('chat');
   
 auth.onAuthStateChanged(user => {
     if(!user) {
