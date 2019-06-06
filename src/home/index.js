@@ -13,3 +13,4 @@ auth.onAuthStateChanged(user => {
     const app = new App();
     root.appendChild(app.render());
 });
+//
