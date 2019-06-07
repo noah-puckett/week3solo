@@ -1,14 +1,13 @@
 import Component from '../Component.js';
-import { auth } from '../services/firebase.js';
+import { auth, messagesByRoomRef } from '../services/firebase.js';
 
 class SendMessage extends Component {
 
     render() {
         const form = this.renderDOM();
-
-        const roomRef = this.props.roomRef;
+        const key = this.props.key;
         
-        const messagesRef = roomRef.child('messages');
+        const messagesRef = messagesByRoomRef.child(key);
 
         const input = form.querySelector('input');
         
@@ -16,16 +15,13 @@ class SendMessage extends Component {
             event.preventDefault();
             
             const newMessageRef = messagesRef.push();
-            console.log('this is the input', input.value);
             
             newMessageRef.set({
                 owner: auth.currentUser.uid,
                 message: input.value,
-
-                // uid: 123, // id of who said this
-                // displayName: 'name of user who said this',
-                // photoURL: '/url/to/who/said/this.png',
-                // date: new Date()
+                displayName: auth.currentUser.displayName,
+                photoURL: auth.currentUser.photoURL,
+                date: Date(),
             });
 
             form.reset();
