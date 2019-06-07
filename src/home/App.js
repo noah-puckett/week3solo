@@ -35,7 +35,7 @@ class App extends Component {
         return /*html*/ ` 
             <div>
                 <main>
-                    <p>IF YOU CAN READ THIS, YOU'RE ON THE MAIN PAGE</p>
+                    <p>Welcome to Dogtalks! Feel free to make a chat room of your own, or join someone else's!</p>
                 </main>
             </div>
         `;

@@ -18,7 +18,6 @@ class ChatList extends Component {
     renderTemplate() {
         return /*html*/ ` 
             <ul>
-
             </ul>
         `;
     }

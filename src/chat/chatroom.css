@@ -1,9 +1,39 @@
+#chat {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgba(119, 173, 148, 0.445);
+    border-radius: .5em;
+    padding: 10px;
+}
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+}
+
 #date {
+    display: flex;
     font-size: .8em;
     color: gainsboro;
 }
 
 #name {
+    display: flex;
     font-size: 1.2em;
-    color: aquamarine;
+    font-weight: 700;
+    color: rgb(53, 226, 168);
+}
+
+ul {
+    list-style: none;
+}
+
+form {
+    display: flex;
+    order: 2;
+}
+
+form input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
 }

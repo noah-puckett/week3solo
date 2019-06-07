@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono|Share+Tech+Mono&display=swap');
+
+a {
+    display: flex;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.8em;
+    color: rgb(40, 185, 125);
+}
+
+button {
+    display: flex;
+    
+}
+
+form input {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 35%;
+    
+}
