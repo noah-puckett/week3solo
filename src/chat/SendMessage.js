@@ -25,7 +25,6 @@ class SendMessage extends Component {
             });
 
             form.reset();
-
         });
             
         return form;

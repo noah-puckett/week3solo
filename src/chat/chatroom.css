@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono|Share+Tech+Mono&display=swap');
+
 #chat {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     border: 5px solid rgba(119, 173, 148, 0.445);
     border-radius: .5em;
     padding: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 body {
@@ -25,14 +33,16 @@ body {
 
 ul {
     list-style: none;
+
 }
 
 form {
     display: flex;
-    order: 2;
+    flex-direction: row;
+    order: 3;
 }
 
-form input {
+input {
     display: flex;
     flex-wrap: wrap;
     width: 85%;

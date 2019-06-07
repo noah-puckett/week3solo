@@ -4,7 +4,6 @@ import { auth, roomFolderRef } from '../services/firebase.js';
 class AddRoom extends Component {
 
     render() {
-
         const form = this.renderDOM();
         
         form.addEventListener('submit', () => {

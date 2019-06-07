@@ -10,12 +10,10 @@ a {
 
 button {
     display: flex;
-    
 }
 
 form input {
     display: flex;
     flex-wrap: wrap;
     max-width: 35%;
-    
 }

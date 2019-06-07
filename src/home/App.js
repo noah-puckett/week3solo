@@ -27,7 +27,6 @@ class App extends Component {
                 roomList.update({ rooms });
             });
 
-
         return dom;
     }
 
