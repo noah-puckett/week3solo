@@ -12,10 +12,11 @@ class SendMessage extends Component {
 
         const input = form.querySelector('input');
         
-        form.addEventListener('submit', () => {
+        form.addEventListener('submit', event => {
             event.preventDefault();
-
+            
             const newMessageRef = messagesRef.push();
+            console.log('this is the input', input.value);
             
             newMessageRef.set({
                 owner: auth.currentUser.uid,
@@ -25,10 +26,10 @@ class SendMessage extends Component {
                 // displayName: 'name of user who said this',
                 // photoURL: '/url/to/who/said/this.png',
                 // date: new Date()
-            })
-                .then(() => {
-                    form.reset();
-                });
+            });
+
+            form.reset();
+
         });
             
         return form;

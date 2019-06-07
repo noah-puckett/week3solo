@@ -22,7 +22,7 @@ class ChatApp extends Component {
         roomRef
             .on('value', snapshot => {
                 const value = snapshot.val();
-                const messages = value.messages ? Object.values(value) : [];
+                const messages = value.messages ? Object.values(value.messages) : [];
                 chatList.update({ messages: messages });
             });
 

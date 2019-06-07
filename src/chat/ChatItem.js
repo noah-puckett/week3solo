@@ -5,7 +5,6 @@ import Component from '../Component.js';
 class ChatItem extends Component {
     renderTemplate() {
         const message = this.props.message;
-        console.log(message);
         return /*html*/ ` 
             <li>
                 <p>${message.message}</p>
