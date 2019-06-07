@@ -3,7 +3,6 @@ import './html-equal.js';
 import './Profile.test.js';
 import { app } from '../src/services/firebase.js'; 
 import './RoomItem.test.js';
-import './functiontest.test.js';
 
 QUnit.done(() => {
     app.delete();
