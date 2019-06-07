@@ -17,7 +17,7 @@ class AddRoom extends Component {
             const room = {
                 key: roomRef.key,
                 owner: auth.currentUser.uid,
-                name: formData.get('room-name')
+                name: formData.get('room-name'),
             };
 
             roomRef.set(room).then(() => {

@@ -5,10 +5,10 @@ class ChatList extends Component {
 
     render() {
         const dom = this.renderDOM();
-        const rooms = this.props.rooms;
+        const messages = this.props.messages;
 
-        rooms.forEach(room => {
-            const chatItem = new ChatItem({ room });
+        messages.forEach(message => {
+            const chatItem = new ChatItem({ message });
             dom.appendChild(chatItem.render());
         }); 
 
