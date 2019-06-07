@@ -3,7 +3,7 @@ import Header from '../shared/Header.js';
 import ChatList from './ChatList.js';
 import QUERY from '../QUERY.js';
 import SendMessage from './SendMessage.js';
-import { roomFolderRef } from '../services/firebase.js';
+import { messagesByRoomRef } from '../services/firebase.js';
 
 class ChatApp extends Component {
     
@@ -17,16 +17,16 @@ class ChatApp extends Component {
 
         //Lili's code helpin' me out here
         const searchParams = QUERY.parse(window.location.search.slice(1));
-        const roomRef = roomFolderRef.child(searchParams.key);
+        const roomRef = messagesByRoomRef.child(searchParams.key);
 
         roomRef
             .on('value', snapshot => {
                 const value = snapshot.val();
-                const messages = value.messages ? Object.values(value.messages) : [];
+                const messages = value ? Object.values(value) : [];
                 chatList.update({ messages: messages });
             });
 
-        const sendMessage = new SendMessage({ roomRef });
+        const sendMessage = new SendMessage({ roomRef, key: searchParams.key });
         main.appendChild(sendMessage.render());
 
         const chatList = new ChatList({ messages: [] });
