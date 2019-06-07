@@ -9,8 +9,8 @@ class ChatItem extends Component {
         return /*html*/ ` 
             <li>
                 <p>${message.message}</p>
-                </li>
-                `;
+            </li>
+        `;
     }
 }
 export default ChatItem;

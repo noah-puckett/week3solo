@@ -8,18 +8,18 @@ class SendMessage extends Component {
 
         const roomRef = this.props.roomRef;
         
-        const messagesRef = roomRef.child('message');
+        const messagesRef = roomRef.child('messages');
+
+        const input = form.querySelector('input');
         
         form.addEventListener('submit', () => {
             event.preventDefault();
-            
-            const formData = new FormData(form);
 
             const newMessageRef = messagesRef.push();
             
             newMessageRef.set({
                 owner: auth.currentUser.uid,
-                message: formData.get('message'),
+                message: input.value,
 
                 // uid: 123, // id of who said this
                 // displayName: 'name of user who said this',
