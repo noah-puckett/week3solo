@@ -1,13 +1,14 @@
 import Component from '../Component.js';
-//TODO: import better things from firebase? actions?
-//import { auth, roomFolderRef } from '../services/firebase.js';
 
 class ChatItem extends Component {
     renderTemplate() {
         const message = this.props.message;
-        return /*html*/ ` 
+        const date = new Date(message.date);
+        return /*html*/ `
             <li>
-                <p>${message.message}</p>
+                <p id="date">${date.toLocaleDateString()} at ${date.toLocaleTimeString()}</p>
+                <p id="name">${message.displayName}: </p>
+                <p id="message">${message.message}</p>
             </li>
         `;
     }
