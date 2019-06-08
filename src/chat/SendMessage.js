@@ -33,7 +33,7 @@ class SendMessage extends Component {
     renderTemplate() {
         return /*html*/ ` 
             <form>
-                <input name="message" type="text">
+                <input name="message" type="text" autocomplete="off">
                 <button>Send</button>
             </form>
         `;

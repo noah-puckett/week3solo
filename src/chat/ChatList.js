@@ -10,6 +10,7 @@ class ChatList extends Component {
         messages.forEach(message => {
             const chatItem = new ChatItem({ message });
             dom.appendChild(chatItem.render());
+            dom.scrollTop = dom.scrollHeight;
         }); 
 
         return dom;
