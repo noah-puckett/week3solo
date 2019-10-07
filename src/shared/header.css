@@ -1,8 +1,11 @@
+
 header {
     background-color: aquamarine;
+    font-family: 'Nova Mono', monospace;
 }
 
 h1 {
+    font-family: 'Nova Mono', monospace;
     display: flex;
     justify-content: center;
     font-size: 6em;

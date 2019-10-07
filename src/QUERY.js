@@ -1,4 +1,3 @@
-
 const QUERY = {
     parse(queryString) {
         const queryProps = {};

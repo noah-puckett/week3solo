@@ -1,12 +1,11 @@
 img {
-    height: 300px;
+    height: 200px;
     width: auto;
     margin-bottom: 50px;
 }
 
 .username {
     display: block;
-
     font-size: 3em;
 }
 
